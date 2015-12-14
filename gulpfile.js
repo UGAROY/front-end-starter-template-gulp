@@ -4,10 +4,11 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect'),
 	sass = require('gulp-sass'),
 	jshint = require('gulp-jshint'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	argv = require('yargs').argv;
 	
 var path = {
-	app: './app'
+	app: './' + argv.env || 'app'
 };
 	
 gulp.task('connect', function () {
